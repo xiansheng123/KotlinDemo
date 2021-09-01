@@ -1,6 +1,5 @@
 package com.example.KotlinDemo
 
-import org.omg.CORBA.Object
 import org.springframework.context.annotation.Description
 import org.springframework.stereotype.Service
 import org.springframework.web.bind.annotation.GetMapping
