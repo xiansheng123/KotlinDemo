@@ -9,9 +9,8 @@ import java.util.*
 @RestController
 @RequestMapping("/test")
 class TestController(
-    val testService: TestService
+    val fileService: FileService
 ) {
-
 
     @GetMapping("bb")
     fun `how to print list`(): List<String> {
@@ -20,9 +19,9 @@ class TestController(
         return listDemo
     }
 
-
+    //    download file
     @GetMapping(value = ["/get-file.text"], produces = [MediaType.APPLICATION_OCTET_STREAM_VALUE])
     fun getFile(): ByteArray {
-        return testService.readFile()
+        return fileService.readFile()
     }
 }

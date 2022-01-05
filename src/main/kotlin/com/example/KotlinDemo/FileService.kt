@@ -7,7 +7,7 @@ import java.io.InputStream
 
 
 @Service
- class TestService {
+ class FileService {
     fun readFile(): ByteArray {
         val file = ResourceUtils.getFile("classpath:tamplate.pom")
         val fileInputStream: InputStream = FileInputStream(file)
