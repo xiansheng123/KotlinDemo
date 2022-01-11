@@ -24,4 +24,17 @@ class TestController(
     fun getFile(): ByteArray {
         return fileService.readFile()
     }
+
+    //    download file
+    @GetMapping(value = ["/get-file2.text"], produces = [MediaType.APPLICATION_OCTET_STREAM_VALUE])
+    fun getFile2(): ByteArray {
+        return fileService.writeFileFromJar()
+    }
+
+    @GetMapping("read-file")
+    fun readFile(): String {
+        fileService.readFileFromJar()
+        return "please check log"
+    }
+
 }
